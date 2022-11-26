@@ -1,0 +1,55 @@
+body {
+    width: 100%;
+    box-sizing: border-box;
+}
+.flexbox-section {
+    width: 100%;
+}
+.flexbox-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    
+}
+.flexbox-item {
+    width: 25%;
+    list-style-type: none;
+    padding: 20px 0px; /*why I cant use right\left padding?????*/
+    
+}
+.flexbox-item:first-child {
+    width: 50%;
+    
+}
+
+img {
+    width: 250px;
+}
+@media all and (max-width:1024px) {
+    .flexbox-item {
+        width: 33%; 
+    }
+    .flexbox-item:first-child {
+        width: 50%;
+    }
+    .flexbox-item:nth-child(2){
+        width: 50%;
+    }
+}
+@media all and (max-width:600px) {
+    .flexbox-list .flexbox-item{
+        width: 100%;
+    }
+    
+}
+
+
+
+.grid-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+.grid-item:first-child{
+    grid-column: 1/3; 
+}
